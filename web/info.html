@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Info Fetcher</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="header">
+            <nav class="navbar navbar-expand-md justify-content-center bg-dark navbar-dark">
+                <ul class="navbar-nav nav-pills my-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div><!-- End of header-->
+        <div class="h1 text-center my-3">Details Fetcher</div>
+        <form action="info" method="POST" class="row justify-content-center">
+            <div class="col-md-7 my-2">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control form-label" id="email" placeholder="Enter your email" name="email"/>
+            </div>
+            <div class="row justify-content-end col-md-7">
+                    <button class="btn btn-primary col-md-3">Fetch</button>
+            </div>
+        </form>
+    </body>
+</html>

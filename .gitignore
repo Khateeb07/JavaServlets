@@ -1,0 +1,15 @@
+# NetBeans private files
+nbproject/private/
+
+# Build folders
+build/
+dist/
+
+# Compiled files
+*.class
+*.war
+
+# Logs
+*.log
+
+src/java/mypkg/db.properties
