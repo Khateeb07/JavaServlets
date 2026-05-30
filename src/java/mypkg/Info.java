@@ -36,9 +36,8 @@ public class Info extends HttpServlet {
             String em=request.getParameter("email");
             
             DAO obj=new DAO();
-            String driver="com.mysql.cj.jdbc.Driver";
             try {
-                Connection con = obj.toConnect(driver);
+                Connection con = obj.toConnect();
                 PreparedStatement pstm=con.prepareStatement("SELECT fname, lname FROM register WHERE (email=?);");
                 pstm.setString(1, em);
                 ResultSet rs=obj.toFetch(pstm);

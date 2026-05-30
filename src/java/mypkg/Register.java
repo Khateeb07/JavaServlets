@@ -40,9 +40,8 @@ public class Register extends HttpServlet {
             String ps=request.getParameter("pass");
             
             DAO obj=new DAO();
-            String driver="com.mysql.cj.jdbc.Driver";
             try {
-                Connection con=obj.toConnect(driver);
+                Connection con=obj.toConnect();
                 
                 PreparedStatement pstm=con.prepareStatement("INSERT INTO register (fname, lname, email, pass) VALUES (?,?,?,?);");
                 pstm.setString(1, fn);

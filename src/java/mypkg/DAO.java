@@ -16,14 +16,14 @@ public class DAO {
 
     Connection con = null;
 
-    public Connection toConnect(String driver) throws ClassNotFoundException, SQLException, IOException {
+    public Connection toConnect() throws ClassNotFoundException, SQLException, IOException {
         Properties props = new Properties();
         try {
-            props.load(new FileInputStream("src/mypkg/db.properties"));
+            props.load(DAO.class.getResourceAsStream("db.properties"));
             String url = props.getProperty("db.url");
             String username = props.getProperty("db.username");
             String password = props.getProperty("db.password");
-            Class.forName(driver);
+            Class.forName(props.getProperty("db.driver"));
             con = DriverManager.getConnection(url, username, password);
         } catch (Exception e) {
             e.printStackTrace();
